@@ -1,0 +1,57 @@
+Airflow User creation:
+----------------------
+airflow users create \
+    --username admin \
+    --firstname FIRST_NAME \
+    --lastname LAST_NAME \
+    --role Admin \
+    --email admin@example.com
+
+# Start the web server
+airflow webserver --port 8080
+
+# Start the scheduler in a new terminal
+airflow scheduler
+
+How to define default arguments:
+--------------------------------
+default_args = {
+    'owner': 'airflow',
+    'depends_on_past': False,
+    'start_date': datetime(2024, 3, 25),
+    'email': ['airflow@example.com'],
+    'email_on_failure': False,
+    'email_on_retry': False,
+    'retries': 1,
+}
+
+Retry Parameters:
+-----------------
+1.retries  : 'retries': 1
+2.retry_delay (timedelta) : retry_delay
+3.retry_exponential_backoff
+
+Schedule:
+---------
+pre-set : Cron
+---------------
+None  : 
+@once : 
+@hourly    : 0****
+@daily	   : 00***
+@weekly	   : 00**0
+@monthly   : 001**
+@quarterly : 001*/3*
+@yearly    : 0011*
+
+Airflow Trigger Rules:
+----------------------
+all_success  : All should be success
+all_failed   : None of the job succeed
+all_done     : Excecution done
+one_failed   : Fire at lease one failed 
+one_success  : Fire at lease one Succeed
+none_failed  : should succeed or skipped
+none_skipped : None of the job is skipped
+none_failed_or_skipped  : Not faied or skipped
+
