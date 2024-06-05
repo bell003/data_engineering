@@ -1,9 +1,9 @@
 /*
-Query type: SCD implement
-Database servert: Microsoft SQL Server
+Query type: SCD Type 2 implement
+Database server: Microsoft SQL Server
 */
 -- SQL_1
--- create source table
+-- Create a source table
 CREATE TABLE customers_source (
     customer_id INT PRIMARY KEY,
     name VARCHAR(255),
@@ -13,7 +13,7 @@ CREATE TABLE customers_source (
 );
 
 -- SQL_2
--- create target table
+-- Create a target table
 CREATE TABLE customers_target (
     surrogate_key INT IDENTITY(1,1) PRIMARY KEY,
     customer_id INT,
@@ -28,7 +28,7 @@ CREATE TABLE customers_target (
 
 -- let's implement the insert, update practically
 -- SQL_3
--- insert below records into source
+-- Insert the below records into the source
 INSERT INTO customers_source (customer_id, name, address, email, modified_date) VALUES
 (1, 'John Doe', '123 Elm St', 'john@example.com', '2024-01-01'),
 (2, 'Jane Smith', '456 Oak St', 'jane@example.com', '2024-01-02'),
