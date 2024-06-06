@@ -65,6 +65,21 @@ LEFT JOIN customers_source s ON t.customer_id = s.customer_id
 WHERE s.customer_id IS NULL AND t.is_active = 1;
 
 
+--modify the source and validate with above scripts
+-- Update Jane Smith's address
+UPDATE customers_source
+SET address = '999 Maple St', modified_date = '2024-02-01'
+WHERE customer_id = 2;
+
+-- Insert new customer Alice Brown
+INSERT INTO customers_source (customer_id, name, address, email, modified_date) VALUES
+(4, 'Alice Brown', '321 Birch St', 'alice@example.com', '2024-02-01');
+
+-- Delete Bob Johnson
+DELETE FROM customers_source WHERE customer_id = 3;
+
+
+
 
 
 
