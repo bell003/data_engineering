@@ -1,5 +1,25 @@
 /*
 You have the ICC tournament winners' details. Please find the team,  No of matches played, winning count, and losses.
+
+input:
+======
+Team-1 Team_2  winner
+India	  SL	    India
+SL	    Aus	    Aus
+SA	    Eng	    Eng
+Eng	    NZ	    NZ
+Aus	   India	  India
+
+Expected output:
+================
+Team, Total_Matches,Total_Wins,Total_Losses 
+India	2	2	0
+NZ	1	1	0
+Aus	2	1	1
+Eng	2	1	1
+SA	1	0	1
+SL	2	0	2
+
 */
 
 --Create table & insert data
