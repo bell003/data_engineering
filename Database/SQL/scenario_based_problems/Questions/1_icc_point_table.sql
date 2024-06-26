@@ -3,12 +3,12 @@ You have the ICC tournament winners' details. Please find the team,  No of match
 
 input:
 ======
-Team-1 Team_2  winner
-India	  SL	   India
-SL	    Aus	   Aus
-SA	    Eng	   Eng
-Eng	    NZ	   NZ
-Aus	   India	 India
+Team-1,Team_2,winner
+India	SL	India
+SL	Aus	Aus
+SA	Eng	Eng
+Eng	NZ	NZ
+Aus	India	India
 
 Expected output:
 ================
