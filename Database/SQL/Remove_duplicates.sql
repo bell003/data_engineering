@@ -89,7 +89,7 @@ DROP TABLE cars_bkp;
    ########################################################################## */
 
 /* Create cars table */
-CREATE TABLE IF NOT EXISTS cars (
+CREATE TABLE cars (
     id INT,
     model VARCHAR(50),
     brand VARCHAR(40),
