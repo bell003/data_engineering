@@ -34,6 +34,8 @@ for col in df.columns:
     df_col.show()
     df_list.append(df_col)
 
+print(df_list)
+
 df_list = [df.withColumn("index", monotonically_increasing_id()) for df in df_list]
 
 print(df_list)
